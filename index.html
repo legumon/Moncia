@@ -16,11 +16,11 @@
     --ink: #2d2d2d;
     --bone: #f4f4f2;
     --warm: #ede8e3;
-    --gold: #c4956a;
+    --gold: #d77256;
     --gold-light: #32b0c6;
+    --navy: #042d43;
     --muted: #6b7c85;
     --line: rgba(45,45,45,0.12);
-    --navy: #2d2d2d;
   }
 
   html { scroll-behavior: smooth; }
@@ -699,10 +699,8 @@
   </div>
 
   <!-- Lema -->
-  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:400;line-height:1;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s 0.5s forwards;display:flex;align-items:center;gap:1.5rem;justify-content:center;">
-    <img src="favicon.png" alt="" style="height:0.8em;width:auto;filter:brightness(0) invert(1);opacity:0.7;">
+  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:400;line-height:1;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s 0.5s forwards;">
     <em style="color:var(--gold);">Sé Tu Don</em>
-    <img src="favicon.png" alt="" style="height:0.8em;width:auto;filter:brightness(0) invert(1);opacity:0.7;">
   </h1>
   <p style="font-size:0.65rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(245,240,232,0.45);margin-bottom:4rem;opacity:0;animation:fadeUp 0.8s 0.7s forwards;">Be Your Gift</p>
 
@@ -761,21 +759,31 @@
 </section>
 
 <!-- PHILOSOPHY -->
-<section class="philosophy" style="position:relative;overflow:hidden;">
-  <div class="bubble bubble-pink" style="width:220px;height:220px;top:-60px;right:60px;"></div>
-  <div class="bubble bubble-teal-sm" style="width:120px;height:120px;bottom:20px;right:200px;"></div>
-  <div class="section-label reveal">Filosofía</div>
-  <div class="philosophy-body reveal reveal-delay-1">
-    Los líderes más efectivos se conocen a sí mismos.<br>
-    Actúan desde <em>quiénes son</em> — y desde ahí<br>
-    construyen algo que trasciende su cargo.
+<section class="philosophy" style="position:relative;overflow:hidden;min-height:340px;padding:0;">
+  <!-- Nature background -->
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80');background-size:cover;background-position:center;filter:brightness(0.45);"></div>
+  <!-- Castle watermark -->
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-start;padding:0 5rem;pointer-events:none;">
+    <img src="logo-transparent.png" alt="" style="height:220px;width:auto;filter:brightness(0) invert(1);opacity:0.07;">
+  </div>
+  <!-- Content -->
+  <div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:center;padding:7rem 5rem;">
+    <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);opacity:0;animation:fadeUp 0.8s 0.2s forwards;" class="reveal">Filosofía</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:400;line-height:1.55;color:var(--bone);" class="reveal reveal-delay-1">
+      Los líderes más efectivos se conocen a sí mismos.<br>
+      Actúan desde <em style="color:var(--gold);">quiénes son</em> — y desde ahí<br>
+      construyen algo que trasciende su cargo.
+    </div>
   </div>
 </section>
 
 <!-- PARA QUIÉN -->
-<section class="for-whom">
+<section class="for-whom" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');background-size:cover;background-position:center;filter:brightness(0.25);"></div>
+  <img src="logo-transparent.png" alt="" style="position:absolute;right:3%;bottom:5%;height:280px;width:auto;filter:brightness(0) invert(1);opacity:0.06;pointer-events:none;">
+  <div style="position:relative;z-index:2;">
   <div class="for-whom-header">
-    <h2 class="for-whom-title reveal">Para quienes<br>ya <em>llegaron</em><br>y quieren más</h2>
+    <h2 class="for-whom-title reveal" style="color:var(--bone);">Para quienes<br>ya <em>llegaron</em><br>y quieren más</h2>
   </div>
   <div class="profiles">
     <div class="profile-item reveal">
@@ -798,6 +806,7 @@
       <div class="profile-name">Líderes con propósito</div>
       <div class="profile-desc">Quienes sienten el llamado a liderar desde algo más profundo que los resultados — desde su don genuino.</div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1013,9 +1022,11 @@
 <!-- ESCRITURA -->
 <section style="position:relative;overflow:hidden;">
   <!-- Forest photo banner -->
-  <div style="position:relative;height:280px;overflow:hidden;">
-    <img src="mlc_forest.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.55);">
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+  <div style="position:relative;height:320px;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80');background-size:cover;background-position:center;filter:brightness(0.45);"></div>
+    <!-- Castle watermark -->
+    <img src="logo-transparent.png" alt="" style="position:absolute;right:5%;top:50%;transform:translateY(-50%);height:200px;width:auto;filter:brightness(0) invert(1);opacity:0.08;">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2;">
       <p style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,240,232,0.7);margin-bottom:1rem;">Donde escribo</p>
       <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,3rem);font-weight:400;color:var(--bone);font-style:italic;">Escribo sobre liderazgo,<br>don y conciencia.</h2>
     </div>
@@ -1322,28 +1333,27 @@
 
 <!-- CTA -->
 <section class="cta-section" style="position:relative;overflow:hidden;">
-  <div class="bubble bubble-pink" style="width:300px;height:300px;top:-80px;left:-80px;opacity:0.35;"></div>
-  <div class="bubble bubble-teal" style="width:200px;height:200px;bottom:-60px;right:-40px;opacity:0.3;"></div>
-  <div class="bubble bubble-pink-sm" style="width:120px;height:120px;top:40px;right:120px;opacity:0.25;"></div>
-  <p class="cta-eyebrow reveal">El próximo paso</p>
-  <h2 class="cta-title reveal reveal-delay-1">Una conversación<br>puede <em>cambiarlo</em><br>todo</h2>
-  <p class="cta-sub reveal reveal-delay-2">
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=80');background-size:cover;background-position:center;filter:brightness(0.2);"></div>
+  <img src="logo-transparent.png" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:400px;width:auto;filter:brightness(0) invert(1);opacity:0.04;pointer-events:none;">
+  <div style="position:relative;z-index:2;">
+  <p class="cta-eyebrow reveal" style="color:var(--gold);">El próximo paso</p>
+  <h2 class="cta-title reveal reveal-delay-1" style="color:var(--bone);">Una conversación<br>puede <em style="color:var(--gold);">cambiarlo</em><br>todo</h2>
+  <p class="cta-sub reveal reveal-delay-2" style="color:rgba(245,240,232,0.7);">
     Directo entre vos y yo — conversamos,
     y si hay admisión mutua, comenzamos.
   </p>
   <div class="cta-buttons reveal reveal-delay-3">
-    <a href="https://calendly.com/mlcstudium/sesion-1-1" target="_blank" class="btn-primary">Agendá tu sesión de cortesía</a>
-    <a href="https://wa.me/5491165197078" target="_blank" class="btn-secondary">WhatsApp</a>
-    <a href="#" onclick="window.location.href='mailto:'+'mlcstudium'+'@'+'gmail.com'; return false;" class="btn-secondary">mlcstudium&#64;gmail.com</a>
+    <a href="https://calendly.com/mlcstudium/sesion-1-1" target="_blank" style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:1.1rem 2.5rem;text-decoration:none;transition:background 0.3s;display:inline-block;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Agendá tu sesión de cortesía</a>
+    <a href="https://wa.me/5491165197078" target="_blank" class="btn-secondary" style="color:var(--bone);border-color:rgba(245,240,232,0.4);">WhatsApp</a>
+    <a href="#" onclick="window.location.href='mailto:'+'mlcstudium'+'@'+'gmail.com'; return false;" class="btn-secondary" style="color:var(--bone);border-color:rgba(245,240,232,0.4);">mlcstudium&#64;gmail.com</a>
   </div>
-  <div style="margin-top:6rem;padding-top:4rem;border-top:1px solid var(--line);" class="reveal">
+  <div style="margin-top:6rem;padding-top:4rem;border-top:1px solid rgba(245,240,232,0.15);" class="reveal">
     <p style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">El lema que nos guía</p>
-    <p style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:400;font-style:italic;color:var(--ink);line-height:1.1;display:flex;align-items:center;gap:1rem;justify-content:center;">
-      <img src="favicon.png" alt="" style="height:0.8em;width:auto;opacity:0.5;">
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:400;font-style:italic;color:var(--bone);line-height:1.1;">
       Sé Tu Don
-      <img src="favicon.png" alt="" style="height:0.8em;width:auto;opacity:0.5;">
     </p>
-    <p style="font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);margin-top:0.8rem;">Be Your Gift</p>
+    <p style="font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-top:0.8rem;">Be Your Gift</p>
+  </div>
   </div>
 </section>
 
