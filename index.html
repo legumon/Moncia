@@ -635,6 +635,18 @@
   .footer-links a:hover { color: var(--gold); }
 
   /* ── ANIMATIONS ── */
+  /* ── BURBUJAS DECORATIVAS ── */
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.55;
+  }
+  .bubble-pink    { background: radial-gradient(circle at 40% 40%, #f2cfc6, #e8b4a8); }
+  .bubble-pink-sm { background: radial-gradient(circle at 40% 40%, #f5dbd5, #edc3ba); }
+  .bubble-teal    { background: radial-gradient(circle at 40% 40%, #a8dde5, #85cdd9); }
+  .bubble-teal-sm { background: radial-gradient(circle at 40% 40%, #c2e8f0, #9dd8e3); }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -687,8 +699,10 @@
   </div>
 
   <!-- Lema -->
-  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:400;line-height:1;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s 0.5s forwards;">
+  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:400;line-height:1;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s 0.5s forwards;display:flex;align-items:center;gap:1.5rem;justify-content:center;">
+    <img src="favicon.png" alt="" style="height:0.8em;width:auto;filter:brightness(0) invert(1);opacity:0.7;">
     <em style="color:var(--gold);">Sé Tu Don</em>
+    <img src="favicon.png" alt="" style="height:0.8em;width:auto;filter:brightness(0) invert(1);opacity:0.7;">
   </h1>
   <p style="font-size:0.65rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(245,240,232,0.45);margin-bottom:4rem;opacity:0;animation:fadeUp 0.8s 0.7s forwards;">Be Your Gift</p>
 
@@ -704,6 +718,9 @@
 
 <!-- CONVERSACIÓN CTA -->
 <section style="background:var(--bone);padding:7rem 5rem;text-align:center;border-bottom:1px solid var(--line);position:relative;overflow:hidden;">
+  <div class="bubble bubble-rosa" style="width:280px;height:280px;top:-80px;left:-60px;opacity:0.3;position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 35%, #f2c4b8, #e8a898 70%);pointer-events:none;"></div>
+  <div class="bubble bubble-teal" style="width:200px;height:200px;bottom:-60px;right:-40px;opacity:0.25;position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 35%, #a8dde5, #85cdd9 70%);pointer-events:none;"></div>
+  <div class="bubble bubble-teal-sm" style="width:100px;height:100px;top:40px;right:15%;opacity:0.2;position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 35%, #c2e8f0, #9dd8e3 70%);pointer-events:none;"></div>
   <div style="position:absolute;inset:0;font-family:'Playfair Display',serif;font-size:28vw;font-weight:700;color:var(--gold);opacity:0.04;display:flex;align-items:center;justify-content:center;pointer-events:none;white-space:nowrap;">MLC</div>
   <p style="font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;" class="reveal">El próximo paso</p>
   <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5.5rem);font-weight:400;line-height:1.1;margin-bottom:2rem;max-width:18ch;margin-left:auto;margin-right:auto;" class="reveal reveal-delay-1">
@@ -744,7 +761,9 @@
 </section>
 
 <!-- PHILOSOPHY -->
-<section class="philosophy">
+<section class="philosophy" style="position:relative;overflow:hidden;">
+  <div class="bubble bubble-pink" style="width:220px;height:220px;top:-60px;right:60px;"></div>
+  <div class="bubble bubble-teal-sm" style="width:120px;height:120px;bottom:20px;right:200px;"></div>
   <div class="section-label reveal">Filosofía</div>
   <div class="philosophy-body reveal reveal-delay-1">
     Los líderes más efectivos se conocen a sí mismos.<br>
@@ -992,11 +1011,22 @@
 </section>
 
 <!-- ESCRITURA -->
-<section class="philosophy" style="background:var(--ink);color:var(--bone);">
+<section style="position:relative;overflow:hidden;">
+  <!-- Forest photo banner -->
+  <div style="position:relative;height:280px;overflow:hidden;">
+    <img src="mlc_forest.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.55);">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <p style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,240,232,0.7);margin-bottom:1rem;">Donde escribo</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,3rem);font-weight:400;color:var(--bone);font-style:italic;">Escribo sobre liderazgo,<br>don y conciencia.</h2>
+    </div>
+  </div>
+  <!-- Cards section -->
+  <div class="philosophy" style="background:var(--ink);color:var(--bone);position:relative;">
+  <div class="bubble bubble-pink-sm" style="width:180px;height:180px;top:-40px;left:-50px;opacity:0.2;"></div>
+  <div class="bubble bubble-teal-sm" style="width:140px;height:140px;bottom:-30px;right:80px;opacity:0.2;"></div>
   <div class="section-label reveal" style="color:var(--gold-light)">Donde escribo</div>
   <div class="reveal reveal-delay-1">
     <p style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.2vw,2rem);font-weight:300;line-height:1.6;margin-bottom:2.5rem;color:var(--bone);">
-      Escribo sobre liderazgo, don y conciencia.<br>
       <em style="color:var(--gold-light);">Cada semana y cada mes, en distintos formatos.</em>
     </p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
@@ -1016,11 +1046,8 @@
         <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.6rem;">Blog</div>
         <div style="font-size:0.85rem;color:var(--bone);line-height:1.5;">Comunicación para la Armonía<br><span style="color:rgba(245,240,232,0.5);font-size:0.75rem;">Comunicación consciente</span></div>
       </a>
-      <a href="blog-bitacora.html" style="display:block;padding:1.5rem;border:1px solid rgba(154,125,78,0.4);text-decoration:none;transition:border-color 0.3s;" onmouseover="this.style.borderColor='#c4a97a'" onmouseout="this.style.borderColor='rgba(154,125,78,0.4)'">
-        <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.6rem;">Blog personal · 280 posts</div>
-        <div style="font-size:0.85rem;color:var(--bone);line-height:1.5;">Bitácora de Viaje<br><span style="color:rgba(245,240,232,0.5);font-size:0.75rem;">Escritos del devenir</span></div>
-      </a>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1227,8 +1254,18 @@
   </div>
 </section>
 
+<!-- FOTO SEPARADOR -->
+<div style="height:45vh;overflow:hidden;position:relative;">
+  <img src="foto-bosque.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.7);">
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-style:italic;color:#fff;letter-spacing:0.05em;text-align:center;text-shadow:0 2px 20px rgba(0,0,0,0.4);">Liderá desde quien sos.</p>
+  </div>
+</div>
+
 <!-- TESTIMONIOS -->
-<section class="testimonios">
+<section class="testimonios" style="position:relative;overflow:hidden;">
+  <div class="bubble bubble-teal" style="width:300px;height:300px;top:-80px;right:-60px;opacity:0.2;"></div>
+  <div class="bubble bubble-pink-sm" style="width:180px;height:180px;bottom:80px;left:-40px;opacity:0.2;"></div>
   <div class="testimonios-header">
     <h2 class="testimonios-title reveal">Lo que<br>dicen quienes<br><em>trabajaron</em><br>con Mónica</h2>
     <p class="testimonios-intro reveal reveal-delay-1">
@@ -1284,7 +1321,10 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" style="position:relative;overflow:hidden;">
+  <div class="bubble bubble-pink" style="width:300px;height:300px;top:-80px;left:-80px;opacity:0.35;"></div>
+  <div class="bubble bubble-teal" style="width:200px;height:200px;bottom:-60px;right:-40px;opacity:0.3;"></div>
+  <div class="bubble bubble-pink-sm" style="width:120px;height:120px;top:40px;right:120px;opacity:0.25;"></div>
   <p class="cta-eyebrow reveal">El próximo paso</p>
   <h2 class="cta-title reveal reveal-delay-1">Una conversación<br>puede <em>cambiarlo</em><br>todo</h2>
   <p class="cta-sub reveal reveal-delay-2">
@@ -1298,7 +1338,11 @@
   </div>
   <div style="margin-top:6rem;padding-top:4rem;border-top:1px solid var(--line);" class="reveal">
     <p style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">El lema que nos guía</p>
-    <p style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:400;font-style:italic;color:var(--ink);line-height:1.1;">Sé Tu Don</p>
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:400;font-style:italic;color:var(--ink);line-height:1.1;display:flex;align-items:center;gap:1rem;justify-content:center;">
+      <img src="favicon.png" alt="" style="height:0.8em;width:auto;opacity:0.5;">
+      Sé Tu Don
+      <img src="favicon.png" alt="" style="height:0.8em;width:auto;opacity:0.5;">
+    </p>
     <p style="font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);margin-top:0.8rem;">Be Your Gift</p>
   </div>
 </section>
